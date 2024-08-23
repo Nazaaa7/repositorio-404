@@ -10,7 +10,7 @@ import { EliminarTarea } from "../views/tareas/eliminar-tarea/EliminarTarea";
 import { Landing } from "../views/Landing/Landing";
 import { Aboutus } from "../views/aboutus/Aboutus";
 import { Locations } from "../views/locations/Locations";
-import {Donations} from "../views/donations/donations"
+import  {Donations} from "../views/donations/donations"
 
 const AppRouter = () => {
   return (

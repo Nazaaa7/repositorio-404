@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./landing.css";
 import Header from "../header";
+import {Footer} from "../footer"
 
 export const Landing = () => {
   return (
@@ -32,7 +33,12 @@ export const Landing = () => {
             <p></p>
           </div>
         </div>
+        <div className="App">
+   
+    </div>
       </section>
+
+      <Footer />
     </>
   );
 };

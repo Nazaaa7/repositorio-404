@@ -1,35 +1,29 @@
-// pago.js
-import express from 'express';
-import mercadopago from 'mercadopago';
+import * as mercadopago from 'mercadopago';
+import dotenv from 'dotenv';
 
-// Configura Mercado Pago
+dotenv.config();
+
 mercadopago.configure({
-  access_token: 'https://api.mercadopago.com/v2/wallet_connect/agreements/{agreement_id}/payer_token', // Reemplaza con tu Access Token
+  access_token: process.env.MERCADOPAGO_ACCESS_TOKEN // Reemplaza con tu Access Token
 });
 
-const router = express.Router();
-
-// Define la ruta para crear la preferencia
-router.post('/api/create_preference', async (req, res) => {
+export const createPreference = async (req, res) => {
   try {
     const preference = {
       items: [
         {
-          title: 'Sample Item',
-          quantity: 1,
+          title: req.body.title,
+          quantity: req.body.quantity,
           currency_id: 'ARS',
-          unit_price: 100.00,
+          unit_price: req.body.price,
         },
       ],
     };
 
-    // Usa el método correcto para crear una preferencia
     const response = await mercadopago.preferences.create(preference);
-    res.json(response);
+    res.json(response.body);
   } catch (error) {
     console.error(error);
     res.status(500).send('Error creating preference');
   }
-});
-
-export default router;
+};
