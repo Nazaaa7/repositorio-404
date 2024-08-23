@@ -11,6 +11,7 @@ import { Landing } from "../views/landing/Landing";
 import { Aboutus } from "../views/aboutus/Aboutus";
 import { Locations } from "../views/locations/Locations";
 import  {Donations} from "../views/donations/donations"
+import {Stadistic} from "../views/estadisticas/App";
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter = () => {
         <Route path="/aboutus" element={<Aboutus/>}/>
         <Route path="/locations" element={<Locations/>}/>
         <Route path="/donations" element={<Donations/>}/>
+        <Route path="/stadistics" element={<Stadistic/>}/>
         <Route element={<PublicRoutes />}>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

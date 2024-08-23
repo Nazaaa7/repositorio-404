@@ -4,6 +4,7 @@ import AppRouter from "./routes/AppRouter";
 import { userReducer } from "./context/userReducer";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./views/header";
 
 function App() {
   const obtenerToken = () =>
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <>
+    
       <UserContext.Provider value={{ state, stateDispatch }}>
         <AppRouter />
       </UserContext.Provider>
