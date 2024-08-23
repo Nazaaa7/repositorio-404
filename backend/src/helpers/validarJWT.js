@@ -11,7 +11,7 @@ export const validarJWT = async (token) => {
 
     // Buscamos el usuario por id.
     const [usuario] = await connection.query(
-      "SELECT * FROM USUARIOS WHERE id=? LIMIT 1",
+      "SELECT * FROM usuarios WHERE idUsuario=? LIMIT 1",
       id
     );
 

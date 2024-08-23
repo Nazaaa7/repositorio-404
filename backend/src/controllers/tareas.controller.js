@@ -14,7 +14,7 @@ export const obtenerTareas = async (req, res) => {
 
   const [results] = await connection.query(
     "SELECT * FROM TAREAS WHERE rela_id_usuario=?",
-    [usuario.id]
+    [usuario.idUsuario]
   );
 
   return res.json(results);

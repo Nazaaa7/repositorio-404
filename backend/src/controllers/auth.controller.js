@@ -11,7 +11,7 @@ export const register = async (req, res) => {
 
   // Creamos la consulta.
   const sql =
-    "INSERT INTO USUARIOS (nombre, apellido, usuario, correo, contrasenia) VALUES (?,?,?,?,?)";
+    "INSERT INTO USUARIOS (nombres, apellidos, nombreUsuario, email, contrasenia) VALUES (?,?,?,?,?)";
 
   // Encriptamos la contraseña utilizando la libreria bcrypt.
   const hashContrasenia = bcrypt.hashSync(contrasenia, 10); // El segundo parametro es el numero de veces que se ejecuta el algoritmo de encriptación.
@@ -37,7 +37,7 @@ export const login = async (req, res) => {
   const connection = await connectDB();
 
   // Buscamos el usuario en la bd.
-  const sql = "SELECT * FROM USUARIOS WHERE USUARIO=? LIMIT 1";
+  const sql = "SELECT * FROM USUARIOS WHERE nombreUsuario=? LIMIT 1";
 
   const [buscarUsuario] = await connection.query(sql, usuario);
 

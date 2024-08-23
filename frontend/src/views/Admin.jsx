@@ -16,7 +16,7 @@ const Admin = () => {
         className="d-flex justify-content-center align-items-center "
         style={{ height: "100vh", flexDirection: "column" }}
       >
-        <h1>Bienvenido usuario {state.usuario}</h1>
+   
 
         <button className="btn btn-primary" onClick={() => logOut()}>
           Cerrar sesión

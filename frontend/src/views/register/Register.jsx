@@ -33,12 +33,15 @@ export const Register = () => {
 
     alert(res.msg);
   };
-
+  
   return (
     <main className="register-container">
+      <div className="wave">
+
       <div className="register-header">
         <h2 className="register-title">Registro</h2>
         <span>Complete los datos para crear un usuario</span>
+      </div>
       </div>
       <Form className="register-form" onSubmit={handleSubmit}>
         <FloatingLabel controlId="nombre" label="Nombre" className="mb-3">
@@ -47,7 +50,7 @@ export const Register = () => {
             placeholder="john"
             name="nombre"
             onChange={handleChange}
-          />
+            />
         </FloatingLabel>
 
         <FloatingLabel controlId="apellido" label="Apellido" className="mb-3">
@@ -56,20 +59,20 @@ export const Register = () => {
             placeholder="Doe"
             name="apellido"
             onChange={handleChange}
-          />
+            />
         </FloatingLabel>
 
         <FloatingLabel
           controlId="usuario"
           label="Nombre de Usuario"
           className="mb-3"
-        >
+          >
           <Form.Control
             type="text"
             placeholder="example123"
             name="usuario"
             onChange={handleChange}
-          />
+            />
         </FloatingLabel>
 
         <FloatingLabel controlId="correo" label="Correo" className="mb-3">
@@ -78,25 +81,26 @@ export const Register = () => {
             placeholder="name@example.com"
             name="correo"
             onChange={handleChange}
-          />
+            />
         </FloatingLabel>
 
         <FloatingLabel
           controlId="contrasenia"
           label="Contraseña"
           className="mb-3 password-input"
-        >
+          >
           <Form.Control
             type="password"
             placeholder="name12312"
             name="contrasenia"
             onChange={handleChange}
-          />
+            />
         </FloatingLabel>
 
         <button className="button-register" type="submit">
           Registrarse
         </button>
+     
       </Form>
     </main>
   );
