@@ -13,7 +13,7 @@ export const Stadistic = () => {
 
   useEffect(() => {
     const simulatedBarData = {
-      labels: ["Peces extintos en el año", "Rios contaminados en el año", "Campos afectados"],
+      labels: ["Animales acuaticos afectados por año", "Rios contaminados en el año", "Campos afectados"],
       values: [30, 59, 15]
     };
     setBarData(simulatedBarData);
