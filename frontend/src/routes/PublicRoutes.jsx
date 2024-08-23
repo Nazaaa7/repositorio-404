@@ -5,7 +5,7 @@ import { Navigate, Outlet } from "react-router-dom";
 const PublicRoutes = () => {
   const { state } = useContext(UserContext);
 
-  return !state.isLogged ? <Outlet /> : <Navigate to={"/tareas"} />;
+  return !state.isLogged ? <Outlet /> : <Navigate to={"/donations"} />;
 };
 
 export default PublicRoutes;

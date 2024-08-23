@@ -1,6 +1,6 @@
 .login-container {
   height: 100vh;
-  background-color: #66cc33;
+  background-color: #6c9c53;
   background-size: cover;
   background-position: center;
   background-repeat: none;
@@ -51,15 +51,16 @@
 }
 
 .button-login {
-  background-color: #0f2466;
-  border: 1px solid #2b3b6d;
+  background-color: #25651c;
+  border: 1px solid #2b6d43;
   color: #ffffff;
   padding: 10px;
   border-radius: 10px;
 }
 
 .button-login:hover {
-  background-color: #011453;
+  background-color: #ffffff;
+  color: #25651c;
 }
 
 .login-label {
@@ -69,6 +70,6 @@
 }
 
 .login-label a {
-  color: #00cafd !important;
+  color: #10641e !important;
   text-decoration: none;
 }

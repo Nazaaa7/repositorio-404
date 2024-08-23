@@ -1,34 +1,33 @@
-// frontend/src/views/Donations.jsx
-import React, { useState } from 'react';
-import axios from 'axios';
+import { Link } from "react-router-dom";
+import "./donations.css";
+import '../landing/Landing'; // Asegúrate de tener este archivo para los estilos del header
+import {Footer} from "../footer"
 
 export const Donations = () => {
-  const [loading, setLoading] = useState(false);
-
-  const handleDonate = async () => {
-    setLoading(true);
-
-    try {
-      const response = await axios.post('http://localhost:5000/api/create_preference', {
-        title: 'Donación',
-        quantity: 1,
-        price: 100.00
-      });
-
-      window.location.href = response.data.init_point; // Redirige al checkout de Mercado Pago
-    } catch (error) {
-      console.error('Error al crear la preferencia:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
-    <div>
-      <h1>Realizar una Donación</h1>
-      <button onClick={handleDonate} disabled={loading}>
-        {loading ? 'Cargando...' : 'Donar $100'}
-      </button>
-    </div>
+    <>
+        <header>
+            <div className="top-bar">
+                <div className="logo">
+                    <span>Greenly</span>
+                </div>
+                <div className="contact-info">
+                    <span>Email: contacto@miempresa.com</span>
+                    <span>Teléfono: +123 456 7890</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/aboutus">Sobre Nosotros</Link></li>
+                    <li><Link to="/locations">Locaciones</Link></li>
+                    <li><Link to="/contacto">Contacto</Link></li>
+                </ul>
+                <Link to="/login"   className="donate-button">Donaciones</Link>
+            </nav>
+        </header>
+
+      <Footer />
+    </>
   );
 };
