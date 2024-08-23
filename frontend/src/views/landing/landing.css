@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -9,6 +10,7 @@ body {
     color: #fff;
     padding: 10px 20px;
     display: flex;
+    font-family: "Roboto Condensed", sans-serif;
     justify-content: space-between;
     align-items: center;
 }
@@ -31,12 +33,14 @@ body {
 .top-bar .contact-info a {
     color: #fff;
     text-decoration: none;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 nav {
     background-color: #138c54;
     padding: 10px 20px;
     display: flex;
+    font-family: "Roboto Condensed";
     justify-content: space-between;
     align-items: center;
 }
@@ -56,7 +60,7 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+  
 }
 
 nav .donate-button {
@@ -75,8 +79,10 @@ nav .donate-button {
     padding: 150px 40px;
     position: relative;
 }
-.title{
+.tittle{
     margin-top: 100px;
+    color: #ffffff;
+    font-size: 40px;
 }
 .hero::before {
     content: "";
@@ -99,15 +105,20 @@ nav .donate-button {
     font-size: 18px;
     position: relative;
     z-index: 1;
+    color: #ffffff;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .services {
-    
     text-align: center;
     background-color: #222121;
+    height: 450px;
+    font-family: "Roboto Condensed", sans-serif;
+    
 }
 
 .services h2 {
+    
     color: #fff;
     font-size: 2rem;
     margin-bottom: 30px;
@@ -189,4 +200,92 @@ nav .donate-button {
     width: 500px;
 
 
+}
+
+
+
+.footer-distributed {
+  background-color: #ffffff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+  color: #696a6c;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
 }

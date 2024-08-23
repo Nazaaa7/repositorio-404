@@ -8,8 +8,8 @@ export const Landing = () => {
     <>
       <Header />
       <section className="hero">
-        <h1 className="title">Ayudemos al medio ambiente</h1>
-        <p>¿Sabías que una gota de aceite puede llegar a contaminar 1 Litro de agua?</p>
+        <h1 className="tittle">Ayudemos al medio ambiente</h1>
+        <p >¿Sabías que una gota de aceite puede llegar a contaminar 1 Litro de agua?</p>
       </section>
 
       <section className="services">

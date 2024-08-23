@@ -7,8 +7,7 @@ const Header = () => {
         <header>
             <div className="top-bar">
                 <div className="logo">
-                    <img src="/path-to-your-logo.png" alt="Logo"/>
-                    <span>Mi Empresa</span>
+                    <span>Greenly</span>
                 </div>
                 <div className="contact-info">
                     <span>Email: contacto@miempresa.com</span>
@@ -19,7 +18,7 @@ const Header = () => {
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/aboutus">Sobre Nosotros</Link></li>
-                    <li><Link to="/locaciones">Locaciones</Link></li>
+                    <li><Link to="/locations">Locaciones</Link></li>
                     <li><Link to="/contacto">Contacto</Link></li>
                 </ul>
                 <Link to="/donations"   className="donate-button">Donaciones</Link>

@@ -1,32 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Header from '../header'
+import { Footer } from '../footer'
 
 export const Aboutus = () => {
   return (
     <>
-     <header>
-        <div class="top-bar">
-            <div class="logo">
-                <img src="" alt="EcoGreen"/>
-                <span>EcoGreen</span>
-            </div>
-            <div class="contact-info">
-                <span>Email:</span>
-                <span>Telefono:</span>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/aboutus">Sobre Nosotros</Link></li>
-                <li><Link to="locacion.html">Locaciones</Link></li>
-                <li><Link to="#">Contacto</Link></li>
-            </ul>
-            <a href="#" class="donate-button">Donaciones</a>
-        </nav>
-    </header>
-
-
+     <Header/>
     
     <section class="goals">
         <div class="container">
@@ -55,6 +35,8 @@ export const Aboutus = () => {
         
     
     </section>
+
+    <Footer/>
     </>
   )
 }
